@@ -9,14 +9,27 @@ This microservice allows you to check the size of PDF and DOCX files before uplo
 To request data from the microservice, send a `POST` request to the `/check-file-size` endpoint with the file included in the form data.
 
 
+**Request Example (using JavaScript's fetch API):**
 
-**Request Example (using Python's `requests` library):**
+```javascript
+async function checkFileSize(file) {
+  const url = 'https://file-size-limiter-67005a553eac.herokuapp.com/check-file-size';
+  const formData = new FormData();
+  formData.append('file', file);
 
-```python
-import requests
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      body: formData,
+    });
 
-url = 'https://file-size-limiter-67005a553eac.herokuapp.com/check-file-size'
-files = {'file': open('path/to/your/file.pdf', 'rb')}
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
 
-response = requests.post(url, files=files)
-print(response.json())
+// Usage example
+const file = document.querySelector('input[type="file"]').files[0];
+checkFileSize(file);
