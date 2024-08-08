@@ -30,6 +30,9 @@ async function checkFileSize(file) {
   }
 }
 
+### Receiving Data
+
+
 **Response Examples:**
 {
   "message": "File successfully uploaded",
