@@ -29,3 +29,13 @@ async function checkFileSize(file) {
     console.error('Error:', error);
   }
 }
+
+*Response Examples:*
+{
+  "message": "File successfully uploaded",
+  "size": 123456
+}
+
+{
+  "error": "File size exceeds 5MB limit"
+}
