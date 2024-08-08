@@ -34,4 +34,5 @@ def check_file_size():
     return jsonify({'message': 'File successfully uploaded', 'size': file_size})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
