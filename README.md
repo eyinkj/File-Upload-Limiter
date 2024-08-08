@@ -29,7 +29,3 @@ async function checkFileSize(file) {
     console.error('Error:', error);
   }
 }
-
-// Usage example
-const file = document.querySelector('input[type="file"]').files[0];
-checkFileSize(file);
