@@ -30,7 +30,7 @@ async function checkFileSize(file) {
   }
 }
 
-### Receiving Data
+#### Receiving Data
 
 
 **Response Examples:**
