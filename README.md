@@ -4,12 +4,10 @@ This microservice allows you to check the size of PDF and DOCX files before uplo
 
 ## Communication Contract
 
-### Requesting Data
+### Requesting & Receiving Data
 
-To request data from the microservice, send a `POST` request to the `/check-file-size` endpoint with the file included in the form data.
+To request data from the microservice, send a `POST` request to the `/check-file-size` endpoint with the file included in the form data. Data pertaining to the provided file will be returned in JSON formatting.
 
-
-**Request Example (using JavaScript's fetch API):**
 
 ```javascript
 async function checkFileSize(file) {
@@ -30,10 +28,8 @@ async function checkFileSize(file) {
   }
 }
 
-#### Receiving Data
 
 
-**Response Examples:**
 {
   "message": "File successfully uploaded",
   "size": 123456
