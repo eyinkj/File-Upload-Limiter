@@ -30,7 +30,7 @@ async function checkFileSize(file) {
   }
 }
 
-*Response Examples:*
+**Response Examples:**
 {
   "message": "File successfully uploaded",
   "size": 123456
