@@ -8,7 +8,8 @@ This microservice allows you to check the size of PDF and DOCX files before uplo
 
 To request data from the microservice, send a `POST` request to the `/check-file-size` endpoint with the file included in the form data.
 
-**Endpoint:**
+
+
 **Request Example (using Python's `requests` library):**
 
 ```python
