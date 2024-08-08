@@ -13,6 +13,10 @@ def get_file_size(file):
     file.seek(0, os.SEEK_SET)  # Reset the file pointer to the beginning
     return size
 
+@app.route('/')
+def index():
+    return "File Size Limiter Microservice is running."
+
 @app.route('/check-file-size', methods=['POST'])
 def check_file_size():
     if 'file' not in request.files:
